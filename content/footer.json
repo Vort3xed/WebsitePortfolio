@@ -1,0 +1,39 @@
+{
+	"outboundLinks": [
+		{ 
+			"header": "Purdue",
+			"link": "https://github.com/",
+			"note": "Purdue"
+		}
+	],
+
+	"links": [
+		{ 
+			"person": "Home",
+			"link": "/",
+			"note": "Start here."
+		},
+		{ 
+			"person": "About Me",
+			"link": "#aboutme",
+			"note": "Who am I?"
+		},
+		{ 
+			"person": "Projects",
+			"link": "#projects",
+			"note": "Check out my projects!"
+		}
+	],
+
+	"social": [
+		{
+			"url": "https://github.com/AggyT",
+			"icon": "github"
+		},
+		{
+			"url": "https://www.linkedin.com/in/agathiyatharun",
+			"icon": "linkedin"
+		}
+		
+	]
+}

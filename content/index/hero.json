@@ -1,0 +1,44 @@
+{
+	"intro": {
+		"start": "const Agathiya = ( name, passion ) =>",
+		"middle1": "System.out.println(Agathiya.name + \" \" + Agathiya.passion);",
+		"middle2": "console.log(Agathiya.name + \" \" + Agathiya.passion);",
+		"end": "Hello, my name is",
+		"speed": 60,
+		"deletionSpeed": 80,
+		"wrapper": "h2",
+		"startDelay": 1000,
+		"deleteDelay": 3000,
+		"restartDelay": 12000
+	},
+
+	"header": {
+		"name": "Agathiya Tharun",
+		"usp": "Engineering"
+	},
+
+	"paragraph": "I am in college",
+
+	"buttons": {
+		"primary": {
+			"title": "Contact Me",
+			"url": "",
+			"leaveSite": "false"
+		},
+		"secondary": {
+			"title": "LinkedIn",
+			"url": "",
+			"leaveSite": "true"
+		},
+		"tertiary": {
+			"title": "GitHub",
+			"url": "",
+			"leaveSite": "true"
+		},
+		"quaternary": {
+			"title": "Instagram",
+			"url": "",
+			"leaveSite": "true"
+		}
+	}
+}
