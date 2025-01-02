@@ -37,7 +37,7 @@ export default function MyApp({ Component, pageProps }) {
 	return (
 		<>
 		<Head>
-			<title>Project Portfolio</title>
+			<title>Agathiya's Portfolio</title>
 		</Head>
 		<LazyMotion features={domAnimation}>
 			<Layout>

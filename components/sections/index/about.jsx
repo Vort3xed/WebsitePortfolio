@@ -30,7 +30,8 @@ export default function About() {
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
-					subTitle="I am engineer"
+					subTitle="I am a graduate student with interests in space technology and innovative mechanisms. 
+								I thrive in R&D, programming, manufacturing, and project management environments. Call me Aggy :)"
 				/>
 				<section className={about.content}>
 					<div className={about.image}>

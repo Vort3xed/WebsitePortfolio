@@ -44,7 +44,7 @@ export default function Hero() {
 					<h1 className={hero.header}>
 						{content.header.name}
 						</h1>
-					<h1 className={`${hero.header} ${hero.primaryDim}`}>
+					<h1 className={`${hero.subheader} ${hero.primaryDim}`}>
 						{content.header.usp}
 					</h1>
 				</section>
@@ -65,6 +65,10 @@ export default function Hero() {
 					<button className={`button ${button.secondary} leaveSite`}
 							onClick={ ()=> window.open("https://github.com/AggyT", "_blank") } >
 						{content.buttons.tertiary.title}
+					</button>
+					<button className={`button ${button.secondary} leaveSite`}
+							onClick={ ()=> window.open("https://www.youtube.com/playlist?list=PLH54Dc3hac5rhs0GLU7HcuiwlPyB42sQ-", "_blank") } >
+						{content.buttons.quaternary.title}
 					</button>
 				</section>
 			</Container>

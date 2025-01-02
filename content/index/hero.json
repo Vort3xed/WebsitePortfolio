@@ -1,23 +1,23 @@
 {
 	"intro": {
-		"start": "const Agathiya = ( name, passion ) =>",
-		"middle1": "System.out.println(Agathiya.name + \" \" + Agathiya.passion);",
-		"middle2": "console.log(Agathiya.name + \" \" + Agathiya.passion);",
-		"end": "Hello, my name is",
+		"start": "Innovative Leader",
+		"middle1": "Social Networker",
+		"middle2": "2X Startup Cofounder",
+		"end": "Graduate Researcher",
 		"speed": 60,
 		"deletionSpeed": 80,
 		"wrapper": "h2",
 		"startDelay": 1000,
 		"deleteDelay": 3000,
-		"restartDelay": 12000
+		"restartDelay": 0
 	},
 
 	"header": {
 		"name": "Agathiya Tharun",
-		"usp": "Engineering"
+		"usp": "Mechanical/Aerospace Engineer"
 	},
 
-	"paragraph": "I am in college",
+	"paragraph": "Aspiring astronaut and entrepreneur",
 
 	"buttons": {
 		"primary": {
@@ -36,7 +36,7 @@
 			"leaveSite": "true"
 		},
 		"quaternary": {
-			"title": "Instagram",
+			"title": "YouTube",
 			"url": "",
 			"leaveSite": "true"
 		}
