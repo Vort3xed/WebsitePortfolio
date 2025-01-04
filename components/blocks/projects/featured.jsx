@@ -122,7 +122,7 @@ export default function FeaturedProject({ content }, index) {
 				{isDesktop ? (
 					<Content />
 				) : (
-					<p>no dulap</p>
+					<p>Mobile View</p>
 				)}
 
 			</div>
