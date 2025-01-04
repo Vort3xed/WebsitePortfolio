@@ -27,13 +27,16 @@
 
 	"social": [
 		{
+			"url": "https://www.linkedin.com/in/agathiyatharun",
+			"icon": "linkedin"
+		},
+		{
 			"url": "https://github.com/AggyT",
 			"icon": "github"
 		},
 		{
-			"url": "https://www.linkedin.com/in/agathiyatharun",
-			"icon": "linkedin"
+			"url": "https://www.youtube.com/playlist?list=PLH54Dc3hac5rhs0GLU7HcuiwlPyB42sQ-",
+			"icon": "youtube"
 		}
-		
 	]
 }
