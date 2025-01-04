@@ -13,7 +13,7 @@ import content 		from '../../../content/projects/featured.json'
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images } = content
+	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images, videoEmbedUrl } = content
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
@@ -30,14 +30,15 @@ export default function FeaturedProject({ content }, index) {
 	const [isDesktop, setDesktop] = useState(false);
 
     useEffect(() => {
-      if (window.innerWidth > 1300) {
+		console.log(window.innerWidth)
+      if (window.innerWidth > 700) {
         setDesktop(true);
       } else {
         setDesktop(false);
       }
   
       const updateMedia = () => {
-        if (window.innerWidth > 1300) {
+        if (window.innerWidth > 700) {
           setDesktop(true);
         } else {
           setDesktop(false);
@@ -82,35 +83,7 @@ export default function FeaturedProject({ content }, index) {
 				</div>
 
 			<div className={css.imageContainer}>
-				{/* <span className={`${css.topRightimageAnimationContainer}`}>
-					<m.div variants={hoverLeft}>
-						<Image src={url} alt="x" height={500} width={500} />
-					</m.div>
-				</span>
-				<span className={`${css.bottomLeftimageAnimationContainer}`}>
-					<m.div variants={hoverLeft}>
-						<Image src={url} alt="x" height={500} width={500} />
-					</m.div>
-				</span> */}
-				
-				{/* { images.map( ({key, url, hover, h, w }, index) => {
-						hover = ( hover === 'left' ) ? hoverLeft : hoverRight
-						return (
-							<m.div key={`${index}-${key}`} variants={item}>
-					<span className={`${css.topRightimageAnimationContainer}`}>
-					<m.div variants={hover}>
-						<Image src={url} alt="x" height={500} width={500} />
-					</m.div>
-					</span>
-					<span className={`${css.bottomLeftimageAnimationContainer}`}>
-					<m.div variants={hover}>
-						<Image src={url} alt="x" height={500} width={500} />
-					</m.div>
-					</span>
-				</m.div>
-						)}
-					) } */}
-					{ isDesktop ? (
+					{ isDesktop && videoEmbedUrl === "" ? (
 						<span className={`${css.imageAnimationContainer}`}>
 							{ images.map( ({key, url, hover, h, w }, index) => {
 								hover = ( hover === 'left' ) ? hoverLeft : hoverRight
@@ -130,47 +103,8 @@ export default function FeaturedProject({ content }, index) {
 							) }
 						</span>
 					) : (
-						<></>
+						<iframe width="500" height="340" src={videoEmbedUrl} title="title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					)}
-				{/* <span className={`${css.imageAnimationContainer}`}>
-					{ images.map( ({key, url, hover, h, w }, index) => {
-						hover = ( hover === 'left' ) ? hoverLeft : hoverRight
-						// const translatex = ( hover === 'left' ) ? 300 : 0
-						// const translatey = ( hover === 'left' ) ? 300 : 0
-
-						// const translation = ( hover === 'left' ) ? "translateRight" : "translateBottom"
-						
-
-						return (
-							<m.div key={`${index}-${key}`} variants={item}>
-								<m.div variants={hover}>
-									<Image src={url} alt="x" height={h} width={w} />
-								</m.div>
-							</m.div>
-						)}
-					) }
-				</span> */}
-					{/* { images.map( ({key, url, hover, h, w }, index) => {
-						hover = ( hover === 'left' ) ? hoverLeft : hoverRight
-						return (
-							<m.div key={`${index}-${key}`} variants={item}>
-								<m.div variants={hoverLeft}>
-									<Image src={url} alt="x" height={500} width={500} />
-								</m.div>
-								<m.div variants={hoverRight}>
-									<Image src={url} alt="x" height={500} width={500} />
-								</m.div>
-							</m.div>
-						)}
-					) } */}
-					{/* <m.div key={`${index}-${key}`} variants={item}>
-						<m.div variants={hoverLeft}>
-							<Image src={url} alt="x" height='1200' width='1200' />
-						</m.div>
-						<m.div variants={hoverRight}>
-							<Image src={url} alt="x" height='1200' width='1200' />
-						</m.div>
-					</m.div> */}
 				
 			</div>
 		</m.section>
