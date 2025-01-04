@@ -4,7 +4,7 @@
 		"url": "https://github.com",
 		"repo": "Public",
 		"descriptionTitle": "descTitle",
-		"description": "desc",
+		"description": "desc yooooakjs hakjsdhlfjdsahf kjdsahfkjdsa fhkjsadf hksajdhfkjdsa hfakjdshflkjsad hfkjdsahflkjsadhf lkjdsahfkjdsahf",
 		"imageOptions": [
 		],
 		"images": [
@@ -12,6 +12,8 @@
 			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
 		],
 		"videoEmbedUrl": "",
+		"gltfPath": "/gltf/laptopWithImage.gltf",
+		"cameraSpecs": { "position": [0, 5, 10], "fov": 2 },
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
 			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }
@@ -30,6 +32,8 @@
 			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
 		],
 		"videoEmbedUrl": "https://www.youtube.com/embed/5oeSrpCS6sw",
+		"gltfPath": "/gltf/laptopWithImage.gltf",
+		"cameraSpecs": { "position": [0, 5, 10], "fov": 1.2 },
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
 			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }

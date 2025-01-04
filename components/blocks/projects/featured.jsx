@@ -5,109 +5,131 @@ import { useEffect } from 'react'
 import { m, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
-import Badges 		from '../../utils/badge.list.util'
-import Icon 		from '../../utils/icon.util'
+import Badges from '../../utils/badge.list.util'
+import Icon from '../../utils/icon.util'
 
-import css 			from '../../../styles/sections/projects/featured.module.scss'
-import content 		from '../../../content/projects/featured.json'
+import css from '../../../styles/sections/projects/featured.module.scss'
+import content from '../../../content/projects/featured.json'
+
+import { RenderGLTF } from './rendergltf'
+
+// import { MyModel } from './rendergltf'
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images, videoEmbedUrl } = content
+	const { project, url, repo, descriptionTitle, description, stack, imageOptions, images, videoEmbedUrl, gltfPath, cameraSpecs } = content
 
 	const controls = useAnimation();
-	const { ref, inView  } = useInView({
+	const { ref, inView } = useInView({
 		"threshold": 0.25,
 		"triggerOnce": false
 	})
 
-	useEffect( () => {
-		if ( inView ) {	controls.start("visible") }
-		if ( !inView ) { controls.start("hidden") }
-	}, [ controls, inView ] )
+	useEffect(() => {
+		if (inView) { controls.start("visible") }
+		if (!inView) { controls.start("hidden") }
+	}, [controls, inView])
 
 
 	const [isDesktop, setDesktop] = useState(false);
 
-    useEffect(() => {
+	useEffect(() => {
 		console.log(window.innerWidth)
-      if (window.innerWidth > 700) {
-        setDesktop(true);
-      } else {
-        setDesktop(false);
-      }
-  
-      const updateMedia = () => {
-        if (window.innerWidth > 700) {
-          setDesktop(true);
-        } else {
-          setDesktop(false);
-        }
-      };
-      window.addEventListener('resize', updateMedia);
-      return () => window.removeEventListener('resize', updateMedia);
-    }, []);
+		if (window.innerWidth > 700) {
+			setDesktop(true);
+		} else {
+			setDesktop(false);
+		}
+
+		const updateMedia = () => {
+			if (window.innerWidth > 700) {
+				setDesktop(true);
+			} else {
+				setDesktop(false);
+			}
+		};
+		window.addEventListener('resize', updateMedia);
+		return () => window.removeEventListener('resize', updateMedia);
+	}, []);
+
+
+	// content container
+
+	function Content() {
+		if (videoEmbedUrl === "" && gltfPath === "") {
+			<span className={`${css.imageAnimationContainer}`}>
+				{images.map(({ key, url, hover, h, w }, index) => {
+					hover = (hover === 'left') ? hoverLeft : hoverRight
+
+					return (
+						<m.div key={`${index}-${key}`} variants={item}>
+							<m.div variants={hover}>
+								<Image src={url} alt="x" height={h} width={w} />
+							</m.div>
+						</m.div>
+					)
+				}
+				)}
+			</span>
+		} else if (videoEmbedUrl !== "" && gltfPath === "") {
+			return (
+				<iframe width="500" height="340" src={videoEmbedUrl} title="title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			)
+		} else if (videoEmbedUrl === "" && gltfPath !== "") {
+			return (
+				<RenderGLTF gltfPath={gltfPath} cameraSpecs={cameraSpecs}/>
+			)
+		}
+	}
 
 	return (
-		<m.section 	
+		<m.section
 			key={index}
-			className={css.project} 
+			className={css.project}
 			//framer-motion
 			ref={ref}
 			variants={container}
-			initial={[ "rest", "hidden" ]}
+			initial={["rest", "hidden"]}
 			whileHover="hover"
 			animate={controls} >
-			
-			
-				<div className={css.details}>
-					<div className={css.projectHeader}>
-						<div className={css.header}>
-							<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
-						</div>
-						
-						<div className={css.description}>
-							<p><strong>{descriptionTitle}</strong> {description}</p>
-						</div>
-						<div className={css.stackContainer}>
-							<Badges list={stack} block="stack" fullContainer={false} color={false} />
-						</div>
-						<a href={url} target="_blank" rel="noopener noreferrer">
-						
+
+
+			<div className={css.details}>
+				<div className={css.projectHeader}>
+					<div className={css.header}>
+						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>
+					</div>
+
+					<div className={css.description}>
+						<p><strong>{descriptionTitle}</strong> {description}</p>
+					</div>
+					<div className={css.stackContainer}>
+						<Badges list={stack} block="stack" fullContainer={false} color={false} />
+					</div>
+					<a href={url} target="_blank" rel="noopener noreferrer">
+
 						<m.div variants={''} className={css.viewProject}>
 							<p>View Project</p>
-							<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+							<Icon icon={['fad', 'arrow-right-to-bracket']} />
 						</m.div></a>
-						
-					</div>
+
 				</div>
+			</div>
 
 			<div className={css.imageContainer}>
-					{ isDesktop && videoEmbedUrl === "" && gltfPath === "" ? (
-						<span className={`${css.imageAnimationContainer}`}>
-							{ images.map( ({key, url, hover, h, w }, index) => {
-								hover = ( hover === 'left' ) ? hoverLeft : hoverRight
+				{isDesktop ? (
+					<Content />
+				) : (
+					<p>no dulap</p>
+				)}
 
-								return (
-									<m.div key={`${index}-${key}`} variants={item}>
-										<m.div variants={hover}>
-											<Image src={url} alt="x" height={h} width={w} />
-										</m.div>
-									</m.div>
-								)}
-							) }
-						</span>
-					) : (
-						<iframe width="500" height="340" src={videoEmbedUrl} title="title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					)}
-				
 			</div>
 		</m.section>
 	)
 }
 
 const container = {
-	hidden: { 
+	hidden: {
 		transition: {
 			delayChildren: 0.125,
 			staggerChildren: 0.0625
@@ -134,13 +156,13 @@ const container = {
 }
 
 const item = {
-	hidden: { 
-		y: 75, 
+	hidden: {
+		y: 75,
 		opacity: 0,
 		transition: {
 			type: "tween",
 			ease: "easeIn",
-			duration: .35, 
+			duration: .35,
 		}
 	},
 	visible: {
@@ -149,7 +171,7 @@ const item = {
 		transition: {
 			type: "tween",
 			ease: "easeOut",
-			duration: .5, 
+			duration: .5,
 		}
 	},
 }
