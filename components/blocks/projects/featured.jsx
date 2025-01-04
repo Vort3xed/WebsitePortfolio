@@ -13,6 +13,8 @@ import content from '../../../content/projects/featured.json'
 
 import { RenderGLTF } from './rendergltf'
 
+import { v4 as uuidv4 } from 'uuid'
+
 // import { MyModel } from './rendergltf'
 
 export default function FeaturedProject({ content }, index) {
@@ -77,7 +79,7 @@ export default function FeaturedProject({ content }, index) {
 			)
 		} else if (videoEmbedUrl === "" && gltfPath !== "") {
 			return (
-				<RenderGLTF gltfPath={gltfPath} cameraSpecs={cameraSpecs}/>
+				<RenderGLTF key={uuidv4()}gltfPath={gltfPath} cameraSpecs={cameraSpecs}/>
 			)
 		}
 	}

@@ -31,8 +31,48 @@
 			{ "key": "key",	"hover": "right", 	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" },
 			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
 		],
+		"videoEmbedUrl": "",
+		"gltfPath": "/gltf/phoneholdertest.gltf",
+		"cameraSpecs": { "position": [0, 5, 10], "fov": 1.2 },
+		"stack": [
+			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
+			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }
+		]
+	},
+	{
+		"project": "Robot Video",
+		"url": "https://github.com",
+		"repo": "Public",
+		"descriptionTitle": "descTitle",
+		"description": "desc",
+		"imageOptions": [
+		],
+		"images": [
+			{ "key": "key",	"hover": "right", 	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" },
+			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
+		],
+		"videoEmbedUrl": "",
+		"gltfPath": "/gltf/Assembly.gltf",
+		"cameraSpecs": { "position": [0, 0, -1000], "fov": 1 },
+		"stack": [
+			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
+			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }
+		]
+	},
+	{
+		"project": "Robot Video",
+		"url": "https://github.com",
+		"repo": "Public",
+		"descriptionTitle": "descTitle",
+		"description": "desc",
+		"imageOptions": [
+		],
+		"images": [
+			{ "key": "key",	"hover": "right", 	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" },
+			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
+		],
 		"videoEmbedUrl": "https://www.youtube.com/embed/5oeSrpCS6sw",
-		"gltfPath": "/gltf/laptopWithImage.gltf",
+		"gltfPath": "",
 		"cameraSpecs": { "position": [0, 5, 10], "fov": 1.2 },
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
