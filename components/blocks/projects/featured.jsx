@@ -83,16 +83,11 @@ export default function FeaturedProject({ content }, index) {
 				</div>
 
 			<div className={css.imageContainer}>
-					{ isDesktop && videoEmbedUrl === "" ? (
+					{ isDesktop && videoEmbedUrl === "" && gltfPath === "" ? (
 						<span className={`${css.imageAnimationContainer}`}>
 							{ images.map( ({key, url, hover, h, w }, index) => {
 								hover = ( hover === 'left' ) ? hoverLeft : hoverRight
-								// const translatex = ( hover === 'left' ) ? 300 : 0
-								// const translatey = ( hover === 'left' ) ? 300 : 0
-		
-								// const translation = ( hover === 'left' ) ? "translateRight" : "translateBottom"
-								
-		
+
 								return (
 									<m.div key={`${index}-${key}`} variants={item}>
 										<m.div variants={hover}>
