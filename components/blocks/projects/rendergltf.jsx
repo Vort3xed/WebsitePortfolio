@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Canvas, useFrame } from "@react-three/fiber";
 
 
-export function RenderGLTF({ gltfPath, cameraSpecs }) {
+export function RenderGLTF({ gltfPath, cameraSpecs, zoom }) {
     const Model = ({ url }) => {
         const { scene } = useGLTF(url);
 
@@ -22,9 +22,9 @@ export function RenderGLTF({ gltfPath, cameraSpecs }) {
             scene.position.z -= center.z;
           }, [scene]);
 
-        useFrame(() => {
-            scene.rotation.y += 0.002; // Adjust for desired speed
-        });
+        // useFrame(() => {
+        //     scene.rotation.y += 0.002; // Adjust for desired speed
+        // });
 
         return <primitive object={scene} />;
     };
@@ -44,8 +44,8 @@ export function RenderGLTF({ gltfPath, cameraSpecs }) {
                 castShadow
             />
 
-            <Model url={gltfPath} />
-            <OrbitControls minDistance={1} maxDistance={20} />
+            <Model url={gltfPath}/>
+            <OrbitControls minDistance={zoom.zMin} maxDistance={zoom.zMax} />
         </Canvas>
     );
 

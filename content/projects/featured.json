@@ -14,6 +14,7 @@
 		"videoEmbedUrl": "",
 		"gltfPath": "/gltf/laptopWithImage.gltf",
 		"cameraSpecs": { "position": [0, 5, 10], "fov": 2 },
+		"zoom": {"zMin": 1, "zMax": 20},
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
 			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }
@@ -34,26 +35,25 @@
 		"videoEmbedUrl": "",
 		"gltfPath": "/gltf/phoneholdertest.gltf",
 		"cameraSpecs": { "position": [0, 5, 10], "fov": 1.2 },
+		"zoom": {"zMin": 1, "zMax": 20},
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
 			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }
 		]
 	},
 	{
-		"project": "Robot Video",
+		"project": "RETHi",
 		"url": "https://github.com",
 		"repo": "Public",
 		"descriptionTitle": "descTitle",
-		"description": "desc",
+		"description": "need to add presentation and article and interviewvideo",
 		"imageOptions": [
 		],
-		"images": [
-			{ "key": "key",	"hover": "right", 	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" },
-			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
-		],
+		"images": "",
 		"videoEmbedUrl": "",
 		"gltfPath": "/gltf/Assembly.gltf",
-		"cameraSpecs": { "position": [0, 0, -1000], "fov": 1 },
+		"cameraSpecs": { "position": [3, -20, 10], "fov": 1 },
+		"zoom": {"zMin": 12, "zMax": 25},
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
 			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }
@@ -64,16 +64,14 @@
 		"url": "https://github.com",
 		"repo": "Public",
 		"descriptionTitle": "descTitle",
-		"description": "desc",
+		"description": "desc asjfhas dfaskjd hfasaskjdhfa kshdfkjsadh fkjsadhfkjsad hfkjsahfdkjsa hfdkjsahflkjsahfd kjsahdf jsahf",
 		"imageOptions": [
 		],
-		"images": [
-			{ "key": "key",	"hover": "right", 	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" },
-			{ "key": "key",	"hover": "left",	"h": "400", "w": "400", "url": "/img/projectImages/headshot.jpg" }
-		],
+		"images": "",
 		"videoEmbedUrl": "https://www.youtube.com/embed/5oeSrpCS6sw",
 		"gltfPath": "",
-		"cameraSpecs": { "position": [0, 5, 10], "fov": 1.2 },
+		"cameraSpecs": "",
+		"zoom": "",
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
 			{ "key": "tensorflow",	"name": "Tensorflow", 	"type": "devicon" }

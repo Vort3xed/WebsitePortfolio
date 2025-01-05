@@ -19,7 +19,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle, description, stack, imageOptions, images, videoEmbedUrl, gltfPath, cameraSpecs } = content
+	const { project, url, repo, descriptionTitle, description, stack, imageOptions, images, videoEmbedUrl, gltfPath, cameraSpecs, zoom } = content
 
 	const controls = useAnimation();
 	const { ref, inView } = useInView({
@@ -37,14 +37,14 @@ export default function FeaturedProject({ content }, index) {
 
 	useEffect(() => {
 		console.log(window.innerWidth)
-		if (window.innerWidth > 700) {
+		if (window.innerWidth > 500) {
 			setDesktop(true);
 		} else {
 			setDesktop(false);
 		}
 
 		const updateMedia = () => {
-			if (window.innerWidth > 700) {
+			if (window.innerWidth > 500) {
 				setDesktop(true);
 			} else {
 				setDesktop(false);
@@ -75,11 +75,13 @@ export default function FeaturedProject({ content }, index) {
 			</span>
 		} else if (videoEmbedUrl !== "" && gltfPath === "") {
 			return (
-				<iframe width="500" height="340" src={videoEmbedUrl} title="title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<div className={css.videoContainer}>
+                    <iframe src={videoEmbedUrl} title="title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 			)
 		} else if (videoEmbedUrl === "" && gltfPath !== "") {
 			return (
-				<RenderGLTF key={uuidv4()}gltfPath={gltfPath} cameraSpecs={cameraSpecs}/>
+				<RenderGLTF key={uuidv4()} gltfPath={gltfPath} cameraSpecs={cameraSpecs} zoom={zoom}/>
 			)
 		}
 	}
@@ -111,10 +113,9 @@ export default function FeaturedProject({ content }, index) {
 					<a href={url} target="_blank" rel="noopener noreferrer">
 
 						<m.div variants={''} className={css.viewProject}>
-							<p>View Project</p>
+							<p>Project Files</p>
 							<Icon icon={['fad', 'arrow-right-to-bracket']} />
 						</m.div></a>
-
 				</div>
 			</div>
 
@@ -122,7 +123,7 @@ export default function FeaturedProject({ content }, index) {
 				{isDesktop ? (
 					<Content />
 				) : (
-					<p>Mobile View</p>
+					<p></p>
 				)}
 
 			</div>
