@@ -1,2 +1,2 @@
 # Portfolio
-Agathiya's (1st) Project Portfolio
+Agathiya's Project Portfolio
