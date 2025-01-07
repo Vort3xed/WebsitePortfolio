@@ -21,10 +21,10 @@ export function RenderGLTF({ gltfPath, cameraSpecs, zoom }) {
             scene.position.y -= center.y;
             scene.position.z -= center.z;
           }, [scene]);
-
-        // useFrame(() => {
-        //     scene.rotation.y += 0.002; // Adjust for desired speed
-        // });
+        
+        useFrame(() => {
+            scene.rotation.y += 0.002; // Adjust for desired speed
+        });
 
         return <primitive object={scene} />;
     };
