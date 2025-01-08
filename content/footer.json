@@ -1,9 +1,19 @@
 {
 	"outboundLinks": [
 		{ 
-			"header": "Purdue",
-			"link": "https://github.com/",
-			"note": "Purdue"
+			"header": "Website Code",
+			"link": "https://github.com/WebsitePortfolio",
+			"note": "Github repository"
+		},
+		{ 
+			"header": "CC BY-NC-ND 4.0 License",
+			"link": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+			"note": "Project portfolio license"
+		},
+		{ 
+			"header": "MIT License",
+			"link": "https://opensource.org/license/mit",
+			"note": "Website code license"
 		}
 	],
 
