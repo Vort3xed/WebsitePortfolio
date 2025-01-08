@@ -13,7 +13,7 @@
 		],
 		"videoEmbedUrl": "",
 		"gltfPath": "/gltf/DSO.glb",
-		"cameraSpecs": { "position": [10, 5, 20], "fov": 2 },
+		"cameraSpecs": { "position": [10, 6, 20], "fov": 2 },
 		"zoom": {"zMin": 0.5, "zMax": 5},
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
@@ -76,7 +76,7 @@
 		],
 		"videoEmbedUrl": "",
 		"gltfPath": "/gltf/airbrake.gltf",
-		"cameraSpecs": { "position": [0, 5, 10], "fov": 1.2 },
+		"cameraSpecs": { "position": [0, 0, -10], "fov": 1.2 },
 		"zoom": {"zMin": 100, "zMax": 120},
 		"stack": [
 			{ "key": "python", 		"name": "Python", 		"type": "devicon" },
