@@ -7,10 +7,12 @@ import badges 	from '../../styles/blocks/badges.module.scss';
 export default function BadgesBlock({ title, copy, list, fullContainer, block, icon, invertedColor, headerIcon, containerClass }) {
 	return (
 		<div className={`${badges.badgeBlockContainer} ${containerClass}`}>
-			<span className={headerIcon}>
-				<Icon icon={[ 'fat', icon ]} />
-			</span>
-			<h3>{title}</h3>
+			<div className={badges.header}>
+                <span className={headerIcon}>
+                    <Icon icon={['fat', icon]} />
+                </span>
+                <h3>{title}</h3>
+            </div>
 			<Copy copy={copy} />
 			<Badges list={list} block={block} invertedColor={invertedColor} fullContainer={fullContainer} />
 		</div>

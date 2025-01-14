@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
 				<SectionTitle
 					title="Featured Projects"
 					preTitle="Websites, Applications, and more."
-					subTitle="Inspired by curiosity, driven by the passion."
+					subTitle="Inspired by curiosity, driven by passion."
 				/> 				{
 					content.map((data, index) => {
 						return (

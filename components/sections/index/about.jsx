@@ -30,19 +30,19 @@ export default function About() {
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
-					subTitle="I am a graduate student with interests in space technology and innovative mechanisms. 
-								I thrive in R&D, programming, manufacturing, and project management environments. Call me Aggy :)"
+					subTitle="I like to make new things. I'm a graduate student with interests in space technology and innovative mechanisms. 
+								I thrive in R&D, programming, manufacturing, and project management. Call me Aggy :)"
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
 
-						<Image className="mb-2" src="/img/headshot.jpg" width={425} height={425}/>
+						<Image className="mb-2" src="/img/headshot.jpg" width={450} height={400}/>
 						
 						<div className={about.unit}>
 							<BadgesBlock 
-								title="test" 
+								title="Programming Languages" 
 								containerClass={about.container}
-								list={testskills} 
+								list={languages} 
 								fullContainer="fullContainer"
 								block="methods" 
 								icon="code"
@@ -53,21 +53,37 @@ export default function About() {
 						</div>
 					</div>
 					<div className={about.copy} >
+						<div className={about.eduBlock}>
+							<div className={about.wrapBlock}>
+								<Image className="eduImg" src="/img/eduLogos/purdue.png" width={60} height={40}/>
+								<div className="eduText">
+									<h3>Purdue University</h3>
+									<p>BSME | Manufacturing Minor | Class of 2024</p>
+								</div>
+							</div>
+							<div className={about.wrapBlock}>
+								<Image className="eduImg" src="/img/eduLogos/ucla2.png" width={60} height={20}/>
+								<div className="eduText">
+									<h3>University of California, Los Angeles</h3>
+									<p>MSME/MSAE | Class of 2025</p>
+								</div>
+							</div>
+						</div>
 						<BadgesBlock 
 							title="Engineering Skills" 
 							containerClass={about.container}
 							list={engineeringskills} 
 							fullContainer="fullContainer"
 							block="methods" 
-							icon="terminal"
+							icon="hammer"
 							copy=""
 							//invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>
 						<BadgesBlock 
-							title="Programming Languages" 
+							title="CAD Software" 
 							containerClass={about.container}
-							list={languages} 
+							list={cad} 
 							fullContainer="fullContainer"
 							block="methods" 
 							icon="laptop-code"
@@ -83,18 +99,31 @@ export default function About() {
 }
 
 const languages	= [
-	{ key: 'coffee-beans', 		name: 'Java', 		type: 'fad' },
-	{ key: 'code', 				name: 'Javascript', 	type: 'fad' },
+	{ key: 'calculator', 			name: 'MATLAB', 	type: 'fad' },
 	{ key: 'snake', 			name: 'Python', 	type: 'fad' },
-	{ key: 'file-code', 		name: 'CSS', 		type: 'fad' },
+	{ key: 'terminal', 			name: 'C', 	type: 'fad' },
+	{ key: 'mug-hot', 		name: 'Java', 		type: 'fad' },
+	{ key: 'coffee-beans', 				name: 'Javascript', type: 'fad' },
+	{ key: 'database', 			name: 'SQL', 	type: 'fad' },
+	{ key: 'table', 			name: 'Excel / VBA', 	type: 'fad' },
+	{ key: 'browser', 		name: 'HTML / CSS', 		type: 'fad' },
+	{ key: 'rectangle-vertical-history', 		name: 'AngularJS', 		type: 'fad' }
 ]
 
-const testskills = [
-	{ key: 'code-merge', 			name: 'Git', 	type: 'fad' },
-	{ key: 'code', 					name: 'HTML', 	type: 'fad' },
+const cad	= [
+	{ key: 'cube', 	    	name: 'SolidWorks',     type: 'fad' },
+	{ key: 'cloud', 				name: 'CATIA V5/6', type: 'fad' },
+	{ key: 'gear', 		name: 'NX', 		type: 'fad' },
+	{ key: 'square-i', 			name: 'Inventor', 	type: 'fad' },
+	{ key: 'square-f', 		name: 'Fusion 360', 		type: 'fad' },
+	{ key: 'shapes', 		name: 'CREO', 		type: 'fad' }
 ]
 
 const engineeringskills = [
-	{ key: 'code-merge', 			name: 'Git', 	type: 'fad' },
-	{ key: 'code', 					name: 'HTML', 	type: 'fad' },
+	{ key: 'location-crosshairs', 	name: 'GD&T', 	type: 'fad' },	
+	{ key: 'gears', 					name: 'CAD / CAM', 	type: 'fad' },
+	{ key: 'flask', 					name: 'R&D', 	type: 'fad' },
+	{ key: 'file-chart-column', 					name: 'FEA', 	type: 'fad' },
+	{ key: 'print', 					name: '3D Printing', 	type: 'fad' },
+	{ key: 'axe', 					name: 'Manufacturing', 	type: 'fad' }
 ]

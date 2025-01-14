@@ -17,31 +17,52 @@
 		h3 {
 			position: relative;
 			color: var(--primary);
+		}
 
-			// &:before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	left: calc( $padding * -1 );
-			// 	width: 18px;
-			// 	aspect-ratio: 1/1;
-			// 	background-color: var(--primary-bright);
-			// 	border-radius: 99rem;
-			// 	border: 3px solid var(--background);
-			// 	top: 50%;
-			// 	transform: translate(-50%, -50%);
-			// }
+		.eduBlock {
+			display: flex;
+			flex-direction: column;
 
-			// &:after {
-			// 	content: '';
-			// 	position: absolute;
-			// 	left: calc( $padding * -1 );
-			// 	width: 9px;
-			// 	aspect-ratio: 1/1;
-			// 	background-color: var(--background);
-			// 	border-radius: 99rem;
-			// 	top: 50%;
-			// 	transform: translate(-50%, -50%);
-			// }
+			//gap: var(--size-1x);
+			border: 1px solid var(--primary-dark);
+			border-radius: 2rem;
+			background: var(--background-dim2);
+			box-shadow: 0 0 30px var(--background);
+			overflow: hidden;
+
+			padding-right: 1rem;
+			padding-top: 2rem;
+			padding-bottom: 1rem;
+
+			margin-bottom: var(--size-1x);
+		}
+
+		.wrapBlock {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+
+			gap: var(--size-1x);
+			//border: 1px solid var(--primary-dark);
+			overflow: hidden;
+
+			padding-left: 2rem;
+			padding-right: 2rem;
+			//padding-top: 1rem;
+			//padding-bottom: 1rem;
+
+			margin-bottom: var(--size-1x);
+		}
+		
+		.eduImg {
+			flex-basis: 50%;
+			flex-grow: 1;
+			flex-shrink: 1;
+			position: relative;
+		}
+		
+		.eduText {
+			flex: 1;
 		}
 
 		.container {
@@ -80,9 +101,11 @@
 			width: fit-content;
 			border-radius: 0.5rem;
 			aspect-ratio: 1;
+			margin-right: 20px;
+			//margin-bottom: 15px;
 
 			svg {
-				height: 1.6rem;
+				height: 1.9rem;
 				color: var(--primary);
 
 				path {
@@ -112,7 +135,7 @@
 			img {
 				height: 100%;
 				width: auto;
-				aspect-ratio: 3/4;
+				//aspect-ratio: 3/4;
 				object-fit: cover;
 				border-radius: 2rem;
 			}

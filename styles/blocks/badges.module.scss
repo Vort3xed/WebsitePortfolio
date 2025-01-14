@@ -11,6 +11,13 @@ $background: 	--background-dim2;
 	}
 }
 
+.header {
+	display: flex;
+	align-items: center; //left
+	//flex-direction: column;
+	margin-bottom: 15px;
+}
+
 .list {
 	position: relative;
 	z-index: 1;
