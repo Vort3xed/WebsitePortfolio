@@ -55,14 +55,14 @@ export default function About() {
 					<div className={about.copy} >
 						<div className={about.eduBlock}>
 							<div className={about.wrapBlock}>
-								<Image className="eduImg" src="/img/eduLogos/purdue.png" width={60} height={40}/>
+								<Image style={{ borderRadius: '0px' }} src="/img/eduLogos/purdue.png" width={60} height={40}/>
 								<div className="eduText">
 									<h3>Purdue University</h3>
 									<p>BSME | Manufacturing Minor | Class of 2024</p>
 								</div>
 							</div>
 							<div className={about.wrapBlock}>
-								<Image className="eduImg" src="/img/eduLogos/ucla2.png" width={60} height={20}/>
+								<Image style={{ borderRadius: '0px' }} src="/img/eduLogos/ucla2.png" width={60} height={20}/>
 								<div className="eduText">
 									<h3>University of California, Los Angeles</h3>
 									<p>MSME/MSAE | Class of 2025</p>
